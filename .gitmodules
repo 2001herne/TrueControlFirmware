@@ -1,3 +1,6 @@
 [submodule "external/displaylib_16bit_PICO"]
 	path = external/displaylib_16bit_PICO
 	url = https://github.com/gavinlyonsrepo/displaylib_16bit_PICO.git
+[submodule "external/pico-sdk"]
+	path = external/pico-sdk
+	url = https://github.com/raspberrypi/pico-sdk.git
