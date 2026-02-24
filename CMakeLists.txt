@@ -3,9 +3,10 @@ set(CMAKE_CXX_STANDARD 20)
 
 set(ENV{PICO_BOARD} "pico2")
 set(PICO_STDIO_ENABLE_CRLF_SUPPORT ON)
-if (NOT $ENV{PICO_SDK_PATH})
-    set($ENV{PICO_SDK_PATH} "/usr/share/pico-sdk/")
+if (NOT DEFINED ENV{PICO_SDK_PATH})
+    set(ENV{PICO_SDK_PATH} "${CMAKE_SOURCE_DIR}/external/pico-sdk/")
 endif()
+message("Using pico sdk at $ENV{PICO_SDK_PATH}")
 include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
 project(TrueControlFirmware C CXX ASM)

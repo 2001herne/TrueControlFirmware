@@ -22,6 +22,12 @@ for (auto timestamp = lapTimerSteps.begin() + 1; timestamp < lapTimerSteps.end()
 }                                                                                                \
 printf("\n")
 
+#else
+
+#define LAP_TIMER_CLEAR()
+#define LAP_TIMER_CHECKPOINT(name)
+#define LAP_TIMER_METRICS()
+
 #endif
 
 #endif //TRUECONTROLUSBDESCRIPTORS_LAPTIMER_H
